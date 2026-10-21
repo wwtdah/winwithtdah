@@ -14,7 +14,7 @@
 
 <!-------------------- HTML TEMPLATE -->
 <template>
-
+	contact
 </template>
 
 

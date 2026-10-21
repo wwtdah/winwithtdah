@@ -18,6 +18,7 @@
 
 <template>
 	<Navbar />
+	<router-view/>
 
 	<header>
 		<h1>{{ name }}</h1>
@@ -30,7 +31,7 @@
 			
 			<ul>
 				<li v-for="(item, key) in test2">
-					{{ item.day }} : {{ item.disponibile == true ? 'Présente' : 'Absente' }}
+					{{ item.day }} : {{ item.disponibile == true ? 'Présente' : 'Absente' }} xxx
 				</li>
 			</ul>
 

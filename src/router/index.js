@@ -1,13 +1,14 @@
-import { createMemoryHistory, createRouter } from 'vue-router'
+import { createWebHistory, createRouter } from 'vue-router'
 
 import HomeView from '@/components/pages/HomeView.vue'
 import ContactView from '@/components/pages/ContactView.vue'
 
 const routes = [
-  { path: '/', component: HomeView },
-  { path: '/contact', component: ContactView },
+  { path: '/', name: 'Home', component: HomeView },
+  { path: '/contact', name:'Contact', component: ContactView },
   
 ]
+
 
 const router = createRouter({
   // Note: We're using createMemoryHistory() here for compatibility
@@ -15,7 +16,7 @@ const router = createRouter({
   //       use createWebHistory() or createWebHashHistory() instead,
   //       tying the route to the browser URL. See the documentation
   //       for more information about history modes.
-  history: createMemoryHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 })
 

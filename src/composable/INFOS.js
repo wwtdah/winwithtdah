@@ -8,17 +8,14 @@ export function getObject() {
     return ref([
         {
             day: "lundi à vendredi",
-            ploc: "aaaaaah",
             disponibile: true
         },
         {
             day: "Week-Ends",
-            ploc: "bbbbb",
             disponibile: false
         },
         {
             day: "Jours fériés",
-            ploc: "ccccccc",
             disponibile: false
         }
     ])

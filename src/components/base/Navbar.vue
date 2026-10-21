@@ -1,7 +1,7 @@
 <!-------------------- SCRIPT VARIABLES -->
 <script setup>
 		import {ref} from 'vue'
-        const contactURL = ref("https://scrimba.com")
+        //const contactURL = ref("https://scrimba.com")
 
 
 		
@@ -18,8 +18,10 @@
 <template>
     <nav>
         <ul class="unset">
-            <li><a href="/">Home</a></li>
-            <li><a :href="contactURL">erererer</a></li>
+            <li>
+                <router-link to="/">Accueil</router-link>
+                <router-link :to="{ name: 'Contact' }">Contact</router-link>
+            </li>
         </ul>
     </nav>
 </template>
