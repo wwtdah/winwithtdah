@@ -117,3 +117,134 @@
 .large-border * {
     --fill: var(--color);
 }
+
+
+
+
+
+
+
+
+
+
+/* ------------------------- TABLES -------------------------
+------------------------------------------------------------ */
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gutter);
+}
+
+.table--2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media all and (max-device-width: 850px), (max-width: 850px) {
+    .table, .table--3, .table--2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.table__article {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    height: 100%;
+    padding: calc(0.5 * var(--padding)) var(--padding) calc(1 * var(--padding));
+    --padding: 4vw;
+    position: relative;
+    overflow: hidden;
+    
+    background: var(--nb1);
+    border-radius: var(--border-radius);
+
+    text-align: left;
+
+    --width: 25vw;
+    --width2: 20vw; /*used for table--3:nth-child(2)*/
+    --round-background-image: url(@/assets/img/text/title_round_color2.svg);
+    --round-margin: -0.6;
+}
+
+.table__article > * {
+    position: relative;
+    z-index: 10;
+}
+
+.table__article:before {
+    display: block;
+    content: '';
+    width: var(--width);
+    height: 100vh;
+
+    background: var(--round-background-image) no-repeat 50% 0% / 100%;
+
+    position: absolute;
+    z-index: 5;
+    top: var(--top);
+    left: var(--left);
+}
+
+.table__article > p {
+    margin: 0;
+}
+
+.table__article > p + p {
+    margin-top: var(--gutter);
+}
+
+/* variants 3 */
+
+.table--3 > *:first-child .table__article {
+    --top: calc(var(--round-margin) * var(--width));
+    --left: calc(-0.5 * var(--width));
+}
+
+.table--3 > *:nth-child(2) .table__article {
+    --width: var(--width2);
+    --top: calc(var(--round-margin) * var(--width));
+    --left: calc(50% - 0.5 * var(--width));
+}
+
+.table--3 > *:last-child .table__article {
+    --top: calc(var(--round-margin) * var(--width));
+    --left: calc(100% - 0.5 * var(--width));
+}
+
+@media all and (max-device-width: 750px), (max-width: 750px) {
+    .table--3 > *:nth-child(2) .table__article:before {
+        display: none;
+    }
+
+    .table--3 > *:last-child .table__article {
+        --top: calc(100% + var(--round-margin) * var(--width));
+        --left: calc(100% - 0.5 * var(--width));
+    }
+}
+
+/* variants 2 */
+
+.table--2 > *:first-child .table__article {
+    --top: calc(-0.5 * var(--width));
+    --left: calc(-0.5 * var(--width));
+}
+
+.table--2 > *:last-child .table__article {
+    --top: calc(100% - 0.5 * var(--width));
+    --left: calc(100% - 0.5 * var(--width));
+}
+
+/* titles */
+
+.article-table__title {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: var(--gap-small);
+}
+
+@media all and (max-device-width: 850px), (max-width: 850px) {
+    .article-table__title {
+        margin-bottom: 0;
+    }
+}

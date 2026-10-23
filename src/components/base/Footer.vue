@@ -18,7 +18,9 @@
     <footer>
         <div class="section background background--dark">
             <div class="container">
-                footer
+                <article class="footer">
+                    footer
+                </article>
             </div>
         </div>
     </footer>

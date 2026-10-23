@@ -34,7 +34,7 @@
 
 			<!-- <BackgroundSVG class="header__background"/> -->
 			<div class="container">
-				<div class="header">
+				<article class="header">
 					<!-- <LogoText class="header__logo"/> -->
 
 					<div class="header__title">
@@ -60,7 +60,7 @@
 							Marie Daneels
 						</div>
 					</div>
-				</div>
+				</article>
 			</div>
 		</div>
 		

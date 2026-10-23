@@ -118,4 +118,8 @@
     a:not(.router-link-active):hover {
         color: var(--color3);
     }
+
+    .mainnav--color a:not(.router-link-active):hover {
+        color: var(--color1-4);
+    }
 </style>

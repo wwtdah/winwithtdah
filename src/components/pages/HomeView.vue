@@ -5,6 +5,8 @@
 		
 		///// IMPORT COMPONENTS
 		import Header from '@/components/base/header/HeaderMain.vue'
+		import CtaBackground from '@/components/svg/SVG_CTABackground.vue'
+		import CtaArrow from '@/components/svg/SVG_CTAArrow.vue'
 
 
 		
@@ -19,13 +21,79 @@
 
 	<main>
 
-		<div class="section">
+		<div class="section concept-section">
 			<div class="container">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim sem quis imperdiet placerat. Morbi nec aliquam purus. Proin mi augue, imperdiet volutpat scelerisque a, imperdiet id tellus. Ut non feugiat sapien. Pellentesque hendrerit volutpat commodo. Morbi et hendrerit sapien, ut pellentesque ligula. Quisque ex eros, dapibus vel sapien quis, pretium rutrum neque. Sed a magna rutrum, maximus mauris id, pharetra sapien. Proin vitae convallis enim. Nunc est dolor, consectetur a neque vel, vehicula molestie felis. Curabitur viverra dapibus lectus vel iaculis. Sed magna neque, fermentum a dolor eu, auctor imperdiet odio.</p>
-				<p>Cras nec gravida ex, non tristique odio. Vestibulum suscipit ex vitae ultrices ultricies. Curabitur pulvinar justo sed venenatis pellentesque. Vestibulum euismod tortor id odio scelerisque, non facilisis sapien molestie. Nunc semper, neque id sodales ullamcorper, nisl urna hendrerit lorem, eu egestas neque purus non erat. Sed sodales, risus ut tempus suscipit, lorem urna gravida mauris, id scelerisque erat turpis quis elit. Integer sollicitudin tellus in posuere pharetra. Duis egestas urna sem, vel viverra diam lobortis a. Suspendisse potenti. Phasellus hendrerit fermentum purus, quis porta tellus commodo eu. Etiam ex ante, rhoncus non augue quis, semper pellentesque augue. Vestibulum dignissim dignissim massa, nec condimentum neque placerat vitae. Sed ut ultricies dui. Mauris a velit vestibulum turpis blandit lacinia.</p>
-				<p>Mauris sed justo id lorem condimentum accumsan sed ac justo. Nullam nec efficitur tortor. Donec interdum magna nec dolor viverra, ac cursus ligula rhoncus. Sed nec consectetur mi, eget aliquet urna. Nulla porttitor dolor in dolor feugiat, eu fermentum velit rutrum. Integer ligula magna, vehicula vitae accumsan vel, facilisis non metus. Cras mollis, nunc in rutrum molestie, felis mauris viverra dui, ornare egestas ipsum risus eu orci. Donec sit amet diam in arcu tempor vulputate id in orci. Etiam vel viverra enim, non auctor odio. Cras consectetur est in ex gravida, euismod posuere est accumsan. Phasellus ac laoreet mi. Mauris vulputate porta sodales.</p>
-				<p>Aenean laoreet turpis nec egestas tincidunt. Praesent iaculis lacus sit amet erat pellentesque tristique. Nunc in mi non erat commodo egestas vitae et velit. Nunc at ligula eget augue iaculis blandit. Cras ut augue luctus, fringilla sapien vel, commodo leo. Mauris tempor varius ex ac bibendum. Morbi blandit magna sed ante semper rutrum. Ut ullamcorper tincidunt lectus elementum ornare. Duis mi tellus, laoreet nec elementum nec, convallis sit amet eros. Morbi semper nisl ut ullamcorper euismod. Ut tempus mauris nisi. Vestibulum finibus fringilla commodo. Nam tincidunt in magna sit amet egestas. Sed mollis, nisi eget consectetur pulvinar, arcu leo ultricies dolor, ut dictum leo magna a libero. Curabitur fringilla neque et suscipit euismod. Nullam posuere neque vel enim auctor, non imperdiet urna pulvinar.</p>
-				<p>Vivamus viverra ipsum vitae semper ultrices. Fusce lobortis lacus in mattis rutrum. Cras sit amet volutpat lacus. Nulla commodo augue vehicula vulputate consequat. Nunc elementum ex quis elit convallis blandit. Aenean pellentesque nisl libero, eget pretium nibh blandit et. Sed sem odio, venenatis in maximus ac, porta eu leo. Quisque id tincidunt sem. Nullam tincidunt augue nulla, a posuere magna venenatis sit amet. Aliquam ornare nec sem ac auctor. Nulla facilisi. Praesent convallis arcu eu ultricies efficitur. Nulla tincidunt vehicula ex, vel mattis felis fermentum sit amet.</p>
+				<article class="concept">
+					<div class="mainblock">
+						<h2 class="concept__title decorated-title decorated-title--big decorated-title--border-color3 decorated-title--round-color1-2">
+							<span>Notre concept</span>
+						</h2>
+					</div>
+					<div class="mainblock column gap--big">
+						<p>Je fonctionne par groupe de 4 enfants maximum durant 1 heure trente. Durant cette plage horaire, nous faisons les devoirs et les leçons du jour et nous essayons d’avancer sur ceux de toute la semaine. Nous fonctionnons aussi en cours individuels durant les congés scolaires (séance d’une heure).</p>
+						
+						<p>
+							<i>Pourquoi des cours collectifs et non individuels?</i> L’enfant est non stop seul en séance de lagopède, de psychomotricité, de neuropsychologue,… Mais jamais il ne se retrouve avec d’autres enfants qui vivent des choses similaires à lui. Cela lui permet de se rendre compte que même si cela peut lui sembler injuste, il n’est pas seul.
+							De plus, une grande solidarité se forme au fil des séances.
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+
+		<div class="section section-prices">
+			<div class="container">
+				<article class="prices">
+					<ul class="unset prices__table table table--3">
+						<li>
+							<div class="prices__who table__article">
+								<h3 class="article-table__title">Pour qui ?</h3>
+
+								<p>
+									Les enfants de primaires uniquement
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="prices__who table__article">
+								<h3 class="article-table__title">Où ?</h3>
+
+								<p>
+									Centre Cap Santé
+								</p>
+								<p>
+									Avenue Albert 1er, 13 <br>
+									1342 Limelette
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="prices__who table__article">
+								<h3 class="article-table__title">Quand ?</h3>
+
+								<p>
+									13h30 à 15h00
+								</p>
+
+								<p>
+									ou 15h00 à 16h30
+								</p>
+							</div>
+						</li>
+					</ul>
+
+					<article class="prices__cta">
+						<router-link :to="{ name: 'Contact' }">
+							<span class="link-cta">
+						
+								<span class="link-cta__text">Prendre contact</span>
+								<CtaArrow class="link-cta__arrow"></CtaArrow>
+								<CtaBackground class="link-cta__background">
+								</CtaBackground>
+							</span>
+						</router-link>
+					</article>
+				</article>
 			</div>
 		</div>
 	</main>
@@ -34,5 +102,35 @@
 
 <!-------------------- STYLE -->
 <style scoped>
+	.concept-section {
+		margin-top: var(--gap);
+		background: url(@/assets/img/text/background_concept.svg) no-repeat 50% 10% / 80%;
+	}
 
+	@media all and (max-device-width: 750px), (max-width: 750px) {
+		.concept-section {
+			margin-top: 0;
+		}
+	}
+
+
+
+
+
+	/* ---------- PRICES ---------- */
+
+	.prices {
+
+	}
+
+	.prices__cta {
+		margin-top: calc(-1 * var(--font-size-main));
+		text-align: center;
+	}
+
+	@media all and (max-device-width: 850px), (max-width: 850px) {
+		.prices__cta {
+			margin-top: var(--gap-small);
+		}
+	}
 </style>

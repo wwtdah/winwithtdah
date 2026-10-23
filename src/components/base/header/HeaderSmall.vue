@@ -23,7 +23,7 @@
 	<header>
 		<div class="section header-section header--small">
 			<div class="container">
-				<div class="header">
+				<article class="header">
 					<h1>
 						Contact
 					</h1>
@@ -31,7 +31,7 @@
 					<p>
 						Informations et formulaire de contact
 					</p>
-				</div>
+				</article>
 			</div>
 			<BackgroundSVG class="header__background"/>
 			<BorderSVG class="header__border large-border large-border--bottom"/>
