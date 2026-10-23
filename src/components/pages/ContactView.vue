@@ -4,6 +4,7 @@
 
 		
 		///// IMPORT COMPONENTS
+		import Header from '@/components/base/header/HeaderSmall.vue'
 
 
 		
@@ -14,7 +15,15 @@
 
 <!-------------------- HTML TEMPLATE -->
 <template>
-	contact
+	<Header />
+
+	<main>
+		<div class="section">
+			<div class="container">
+				bouh
+			</div>
+		</div>
+	</main>
 </template>
 
 

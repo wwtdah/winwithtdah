@@ -1,35 +1,119 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  display: flex;
+	flex-flow: column nowrap;
+  position: relative;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+#app > main {
+	flex: 1 1 auto;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+
+
+
+
+
+
+
+
+
+/* ------------------------- SECTIONS -------------------------
+------------------------------------------------------------ */
+.section {
+  width: 100%;
+  padding: var(--global-margin-height) 0;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+.container {
+  width: 100%;
+  padding: 0 var(--global-margin-width);
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+
+
+
+
+/* ---------- MAINBLOCK ---------- */
+
+.mainblock {
+}
+
+.mainblock + .mainblock {
+  margin-top: var(--gap4);
+}
+
+.spacer {
+    display: block;
+    height: clamp(var(--min-height), var(--max-height), var(--height));
+    --min-height: var(--gap4);
+    --max-height: calc(1000 / 16 * 1rem);
+    --height: 15vh;
+}
+
+.spacer--small {
+    --height: 8vh;
+    --max-height: calc(300 / 16 * 1rem);
+}
+
+.spacer--large {
+    --height: 50vh;
+}
+
+.spacer--verylarge {
+    --height: 100vh;
+    --max-height: calc(1500 / 16 * 1rem);
+}
+
+
+
+
+
+/* ---------- BACKGROUND ---------- */
+
+.background {
+	background: var(--background2-main);
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------------------- LARGE BORDERS -------------------------
+------------------------------------------------------------ */
+
+.large-border {
+    width: calc(100% + var(--padd));
+    height: var(--height);
+    min-width: var(--min-width);
+
+    
+    position: absolute;
+    left: calc(-1 * var(--padd));
+    
+    --min-width: calc(1600 / 16 * 1rem);
+    --height: calc(50 / 16 * 1rem);
+    --padd: calc(20 / 16 * 1rem);
+
+    --offset: -0.5;
+
+    --color: var(--color1-3);
+}
+
+.large-border--top {
+    top: calc(var(--offset) * var(--height));
+}
+
+.large-border--bottom {
+    bottom: calc(var(--offset) * var(--height));
+}
+
+.large-border * {
+    --fill: var(--color);
 }
