@@ -73,7 +73,11 @@
 /* ---------- BACKGROUND ---------- */
 
 .background {
-	background: var(--background2-main);
+	background: var(--background1-main);
+}
+
+.background--light {
+    background: var(--background2-main);
 }
 
 
