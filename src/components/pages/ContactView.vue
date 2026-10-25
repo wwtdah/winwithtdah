@@ -39,7 +39,7 @@
 								<h3 class="article-table__title">Horaires</h3>
 
 								<p>
-									<b>Un créneau tous les mercredis</b>
+									<b>Mercredi</b>
 								</p>
 
 								<p>

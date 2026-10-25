@@ -74,7 +74,7 @@
 								<h3 class="article-table__title">Quand ?</h3>
 
 								<p>
-									<b>Un créneau tous les mercredis</b>
+									<b>Mercredi</b>
 								</p>
 
 								<p>
