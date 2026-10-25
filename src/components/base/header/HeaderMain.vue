@@ -51,7 +51,7 @@
 
 					<div class="header__subtitle">
 						<div class="bold">
-							Suivi aux études
+							Soutien scolaire
 						</div>
 						<div>
 							Enfants 6 - 12 ans

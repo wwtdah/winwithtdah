@@ -39,12 +39,13 @@
 								<h3 class="article-table__title">Horaires</h3>
 
 								<p>
-									<b>Les mercredis</b>
+									<b>Un créneau tous les mercredis</b>
 								</p>
 
 								<p>
-									13h30 à 15h00 <br>
-									ou 15h00 à 16h30
+									- 13h30 à 15h00 <br>
+									- 15h00 à 16h30 <br>
+									- 16h30 à 18h00
 								</p>
 							</div>
 						</li>
@@ -68,7 +69,7 @@
 				
 				<article class="infos">
 					<div class="infos__inner mainblock column gap--big">
-						<p>Vous souhaitez réserver une session pour un enfant de primaire ? Merci de remplir le formulaire ci-dessous avec vos informations.</p>
+						<p>Vous souhaitez nous contacter pour mettre en place un suivi ? Merci de remplir le formulaire ci-dessous avec vos informations.</p>
 					
 						<p>
 							Pour toute question ou information supplémentaire, n'hésitez pas à directement nous écrire par mail via <a href="mailto:winwithtdah@gmail.com" class="a-mail">winwithtdah@gmail.com</a>.

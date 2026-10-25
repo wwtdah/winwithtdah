@@ -74,12 +74,13 @@
 								<h3 class="article-table__title">Quand ?</h3>
 
 								<p>
-									<b>Les mercredis</b>
+									<b>Un créneau tous les mercredis</b>
 								</p>
 
 								<p>
-									13h30 à 15h00 <br>
-									ou 15h00 à 16h30
+									- 13h30 à 15h00 <br>
+									- 15h00 à 16h30 <br>
+									- 16h30 à 18h00
 								</p>
 							</div>
 						</li>
@@ -115,7 +116,7 @@
 							</p>
 
 							<p>
-								Ce projet a vu le jour en 2018 et est resté actif jusqu'en 2022. Et puis, je suis devenue maman d’un petit garçon a besoin spécifique. Après 4 années sans exercer dans ce domaine, j’ai décidé de réouvrir ce soutien scolaire pour faire ce qui me passionne.
+								Ce projet a vu le jour en 2018 et est resté actif jusqu'en 2022. Et puis, je suis devenue maman d’un petit garçon a besoin spécifique. Après une petite pause, j’ai décidé de réouvrir le projet pour faire ce qui me passionne.
 							</p>
 
 							<p>
