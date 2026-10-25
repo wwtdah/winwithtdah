@@ -197,11 +197,11 @@
 
 	a.decorated-title, a .decorated-title {
 		font-weight: 400;
-		color: var(--nb3);
+		color: var(--nb4);
 	}
 
 	a.decorated-title:hover, a:hover .decorated-title {
-		color: var(--nb4);
+		color: var(--nb5);
 	}
 
 
@@ -311,7 +311,7 @@
 
 	.links-presentation__list {
 		font-weight: 400;
-		color: var(--nb3);
+		color: var(--nb4);
 	}
 
 	.links-presentation__list {

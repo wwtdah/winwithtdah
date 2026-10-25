@@ -86,7 +86,8 @@
     }
 
     a.router-link-active {
-        --color: var(--nb3);
+        --color: var(--nb4
+        );
     }
 
     a.router-link-active:before {

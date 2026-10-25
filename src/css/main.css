@@ -138,6 +138,20 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--gutter);
+
+    --width: 25vw;
+    --width2: 20vw; /*used for table--3:nth-child(2)*/
+    --round-background-image: url(@/assets/img/text/title_round_color2.svg);
+    --round-margin: -0.6;
+    --background: var(--nb1);
+    --color: var(--nb7);
+    --color-title: var(--nb4);
+}
+
+.table--color1-4 {
+    --background: var(--color1-4);
+    --round-background-image: url(@/assets/img/text/title_round_nb1.svg);
+    --color: var(--nb8);
 }
 
 .table--2 {
@@ -160,15 +174,11 @@
     position: relative;
     overflow: hidden;
     
-    background: var(--nb1);
+    background: var(--background);
     border-radius: var(--border-radius);
 
+    color: var(--color);
     text-align: left;
-
-    --width: 25vw;
-    --width2: 20vw; /*used for table--3:nth-child(2)*/
-    --round-background-image: url(@/assets/img/text/title_round_color2.svg);
-    --round-margin: -0.6;
 }
 
 .table__article > * {
@@ -200,19 +210,28 @@
 
 /* variants 3 */
 
-.table--3 > *:first-child .table__article {
-    --top: calc(var(--round-margin) * var(--width));
-    --left: calc(-0.5 * var(--width));
-}
-
-.table--3 > *:nth-child(2) .table__article {
+.table--3:not(.table--3-2) > * .table__article {
     --width: var(--width2);
     --top: calc(var(--round-margin) * var(--width));
     --left: calc(50% - 0.5 * var(--width));
 }
 
-.table--3 > *:last-child .table__article {
+.table--3-2 > * .table__article {
+    --top: 100vh;
+}
+
+.table--3 > *:first-child .table__article {
     --top: calc(var(--round-margin) * var(--width));
+    --left: calc(-0.5 * var(--width));
+}
+
+.table--3:not(.table--3-2) > *:last-child .table__article {
+    --top: calc(var(--round-margin) * var(--width));
+    --left: calc(100% - 0.5 * var(--width));
+}
+
+.table--3-2 > *:last-child .table__article {
+    --top: calc(100% - 0.5 * var(--width));
     --left: calc(100% - 0.5 * var(--width));
 }
 
@@ -245,6 +264,8 @@
     text-align: center;
     font-weight: 600;
     margin-bottom: var(--gap-small);
+
+    color: var(--color-title);
 }
 
 @media all and (max-device-width: 850px), (max-width: 850px) {

@@ -112,7 +112,7 @@
         padding: var(--section-padding) 0;
         overflow: hidden;
 
-        --section-padding: calc(2 * var(--global-margin-height));
+        --section-padding: calc(1.12 * var(--global-margin-height));
         --container-padding: var(--global-margin-width);
     }
 
@@ -152,6 +152,8 @@
     .footer__separator {
         grid-area: separator;
         position: relative;
+
+        user-select: none;
     }
 
     .footer__separator2 {

@@ -65,6 +65,7 @@
 		height: 100%;
 		min-width: calc(1000 / 16 * 1rem);
 		max-width: calc(1500 / 16 * 1rem);
+		opacity: .4;
 		z-index: 1;
 		top: 0;
 		left: 0;

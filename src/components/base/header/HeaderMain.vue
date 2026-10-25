@@ -100,8 +100,9 @@
 			"title . subtitle" auto
 			/ auto var(--padd-w) 1fr;
 		--padd-w: var(--gap-big);
-		padding: var(--padd-h) 0;
-		--padd-h: var(--gap);
+		padding: var(--padd-h1) 0 var(--padd-h2);
+		--padd-h1: var(--gap-small);
+		--padd-h2: var(--gap);
 		position: relative;
 		z-index: 10;
 	}
@@ -164,8 +165,14 @@
 
 	.image-header {
 		position: relative;
-		height: 50vh;
+		height: 80vh;
 		margin-top: calc(-20 / 16 * 1rem);
+	}
+
+	@media all and (max-device-width: 600px), (max-width: 600px) {
+		.image-header {
+			max-height: calc(500 / 16 * 1rem);
+		}
 	}
 
 	.image-header__image {
