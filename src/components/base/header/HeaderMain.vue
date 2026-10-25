@@ -56,9 +56,6 @@
 						<div>
 							Enfants 6 - 12 ans
 						</div>
-						<div class="small">
-							Marie Daneels
-						</div>
 					</div>
 				</article>
 			</div>
