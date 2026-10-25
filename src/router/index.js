@@ -32,4 +32,6 @@ const router = createRouter({
   routes,
 })*/
 
+console.log('Router page done')
+
 export default router
