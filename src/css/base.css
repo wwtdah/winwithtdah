@@ -27,7 +27,7 @@ html:not(.theme-light) {
 
 :root {
     /* ---------- BACKGROUND ---------- */
-	--background-main: var(--nb0);
+	--background-main: var(--np0);
 	--background1-main: var(--nb3);
 	--background2-main: var(--nb1);
 	--background-body: var(--background-main);
@@ -641,24 +641,15 @@ a:not(.highlight) {
     color: inherit;
 }
 
-a.highlight {
-    color: var(--color-highlight);
-    font-weight: 300;
-}
 
-:not(a).highlight {
-    font-weight: 400;
-}
-
-a.highlight--light {
-    color: var(--color-highlight-light);
+.highlight {
+    font-weight: 550;
+    color: var(--color);
+    --color: var(--color1-2);
+    --color-highlight: var(--color1);
 }
 
 a.highlight:hover {
-    color: var(--color-highlight2);
-}
-
-a.highlight--light:hover {
     color: var(--color-highlight);
 }
 

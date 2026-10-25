@@ -7,6 +7,9 @@
 		import Header from '@/components/base/header/HeaderSmall.vue'
 		import CtaBackground from '@/components/svg/SVG_CTABackground.vue'
 		import CtaArrow from '@/components/svg/SVG_CTAArrow.vue'
+		
+		import { changeHeaderTitle } from '@/components/base/header/HeaderSmall.vue'
+		changeHeaderTitle('Contact', 'Informations et formulaire de contact')
 </script>
 
 
@@ -72,7 +75,7 @@
 						<p>Vous souhaitez nous contacter pour mettre en place un suivi ? Merci de remplir le formulaire ci-dessous avec vos informations.</p>
 					
 						<p>
-							Pour toute question ou information supplémentaire, n'hésitez pas à directement nous écrire par mail via <a href="mailto:winwithtdah@gmail.com" class="a-mail">winwithtdah@gmail.com</a>.
+							Pour toute question ou information supplémentaire, n'hésitez pas à directement nous écrire par mail via <a href="mailto:winwithtdah@gmail.com" class="highlight">winwithtdah@gmail.com</a>.
 						</p>
 					</div>
 				</article>
@@ -128,15 +131,6 @@
 		z-index: -2;
 		top: calc(100% - 0.5 * var(--sq));
 		right: calc(-0.5 * var(--sq));
-	}
-
-	.a-mail {
-		font-weight: 550;
-		color: var(--color1-2);
-	}
-
-	.a-mail:hover {
-		color: var(--color1);
 	}
 
 	@media all and (max-device-width: 850px), (max-width: 850px) {

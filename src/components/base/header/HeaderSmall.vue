@@ -1,3 +1,12 @@
+
+<script>
+	var var_title = '';
+	var var_subtitle = '';
+	export function changeHeaderTitle(newTitle, newSubtitle) {
+		var_title = ref(newTitle);
+		var_subtitle = ref(newSubtitle);
+	}
+</script>
 <!-------------------- SCRIPT VARIABLES -->
 <script setup>
 		import {ref} from 'vue'
@@ -11,7 +20,11 @@
 		import { changeIsColored } from '@/components/base/Navbar.vue'
 		
 		changeIsColored(true)
+
+		const title = var_title;
+		const subtitle = var_subtitle;
 </script>
+
 
 
 
@@ -25,11 +38,11 @@
 			<div class="container">
 				<article class="header">
 					<h1>
-						Contact
+						{{ title }}
 					</h1>
 
 					<p>
-						Informations et formulaire de contact
+						{{ subtitle }}
 					</p>
 				</article>
 			</div>
