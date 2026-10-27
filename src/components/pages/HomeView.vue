@@ -13,6 +13,16 @@
 		import PresentationPhotoDecoration from '@/assets/img/text/photo_decoration_vertical.svg'
 
 		import PartnersPhotoCapSante from '@/assets/img/logo/partners/capSante.avif'
+
+		import Agenda from '@/composable/COMP_Agenda.vue'
+		import Address from '@/composable/COMP_Address.vue'
+
+		import { getMail, getTel, getPartners } from '@/composable/INFOS.js'
+		const mail = getMail()
+		const tel = getTel()
+		const partnersInfos = getPartners()
+		const partners = ref(partnersInfos)
+		const partnersName = partnersInfos.length <= 1 ? ref('Notre partenaire') : ref('Nos partenaires')
 </script>
 
 
@@ -60,28 +70,14 @@
 							<div class="prices__who table__article">
 								<h3 class="article-table__title">Où ?</h3>
 
-								<p>
-									<b>Centre Cap Santé</b>
-								</p>
-								<p>
-									Avenue Albert 1er, 13 <br>
-									1342 Limelette
-								</p>
+								<Address></Address>
 							</div>
 						</li>
 						<li>
 							<div class="prices__who table__article">
 								<h3 class="article-table__title">Quand ?</h3>
 
-								<p>
-									<b>Mercredi</b>
-								</p>
-
-								<p>
-									- 13h30 à 15h00 <br>
-									- 15h00 à 16h30 <br>
-									- 16h30 à 18h00
-								</p>
+								<Agenda></Agenda>
 							</div>
 						</li>
 					</ul>
@@ -135,15 +131,16 @@
 								<li>
 									<span class="decorated-title decorated-title--small decorated-title--round-color1-3 decorated-title--onlyround">
 										<span>
-											+32 498 13 80 80
+											{{ tel }}
 										</span>
 									</span>
 								</li>
+
 								<li>
-									<a href="mailto:winwithtdah@gmail.com">
+									<a :href="`mailto:${mail}`">
 										<span class="decorated-title decorated-title--small decorated-title--round-color1-3 decorated-title--onlyround">
 											<span>
-												winwithtdah@gmail.com
+												{{ mail }}
 											</span>
 										</span>
 									</a>
@@ -163,15 +160,17 @@
 				<article class="partners">
 					<div class="partners__title">
 						<h2 class="concept__title decorated-title decorated-title--big decorated-title--border-color1-2 decorated-title--round-color3">
-							<span>Notre partenaire</span>
+							<span>
+								{{ partnersName }}
+							</span>
 						</h2>
 					</div>
 
 					<div class="partners__list list-partners">
 						<ul class="unset list-partners__list">
-							<li>
-								<a href="https://www.cmcapsante.be/">
-									<img :src="PartnersPhotoCapSante" class="list-partners__logo"/>
+							<li v-for="partner in partners">
+								<a :href="partner.href">
+									<img :src="partner.logo" :alt="partner.name" class="list-partners__logo"/>
 								</a>
 							</li>
 						</ul>
@@ -386,22 +385,39 @@
 		margin: auto;
 	}
 
-	.partners:after {
+	/* .partners:after {
 		display: block;
 		content: '';
 		flex: 1 1 auto;
-	}
+	} */
 
 	.partners__title {
 		flex: 0 0 auto;
 	}
 
-	.partners__list {
+	.list-partners {
+		flex: 1 1 auto;
+	}
+	
+	.list-partners__list {
+		display: flex;
+		flex-flow: row wrap;
+		gap: var(--gutter);
+		justify-content: start;
+		align-items: center;
+	}
+
+	.list-partners__logo {
+		max-width: calc(200 / 16 * 1rem);
 	}
 
 	@media all and (max-device-width: 600px), (max-width: 600px) {
 		.partners {
 			flex-flow: column wrap;
+		}
+	
+		.list-partners__list {
+			justify-content: center;
 		}
 	}
 </style>

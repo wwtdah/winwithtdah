@@ -10,6 +10,14 @@
 		
 		import { changeHeaderTitle } from '@/components/base/header/HeaderSmall.vue'
 		changeHeaderTitle('Contact', 'Informations et formulaire de contact')
+
+		import Agenda from '@/composable/COMP_Agenda.vue'
+		import Address from '@/composable/COMP_Address.vue'
+
+		import { getPrice, getMail, getForm } from '@/composable/INFOS.js'
+		const price = getPrice()
+		const mail = getMail()
+		const form = getForm()
 </script>
 
 
@@ -28,28 +36,24 @@
 							<div class="infos__location table__article">
 								<h3 class="article-table__title">Adresse</h3>
 
-								<p>
-									<b>Centre Cap Santé</b>
-								</p>
-								<p>
-									Avenue Albert 1er, 13 <br>
-									1342 Limelette
-								</p>
+								<Address></Address>
 							</div>
 						</li>
 						<li>
-							<div class="infos__price table__article">
+							<div class="infos__price price-infos table__article">
 								<h3 class="article-table__title">Horaires</h3>
 
 								<p>
-									<b>Mercredi</b>
+									
 								</p>
 
-								<p>
+								<!-- <p>
 									- 13h30 à 15h00 <br>
 									- 15h00 à 16h30 <br>
 									- 16h30 à 18h00
-								</p>
+								</p> -->
+
+								<Agenda></Agenda>
 							</div>
 						</li>
 						<li>
@@ -57,7 +61,7 @@
 								<h3 class="article-table__title">Prix</h3>
 
 								<p>
-									35€/1h30 de suivi par enfant
+									{{ price }}
 								</p>
 							</div>
 						</li>
@@ -75,7 +79,7 @@
 						<p>Vous souhaitez nous contacter pour mettre en place un suivi ? Merci de remplir le formulaire ci-dessous avec vos informations.</p>
 					
 						<p>
-							Pour toute question ou information supplémentaire, n'hésitez pas à directement nous écrire par mail via <a href="mailto:winwithtdah@gmail.com" class="highlight">winwithtdah@gmail.com</a>.
+							Pour toute question ou information supplémentaire, n'hésitez pas à directement nous écrire par mail via <a :href="`mailto:${mail}`" class="highlight">{{ mail }}</a>.
 						</p>
 					</div>
 				</article>
@@ -83,7 +87,7 @@
 				<div class="spacer spacer--small"></div>
 
 				<article class="infos-cta">
-					<a href="https://docs.google.com/forms/d/e/1FAIpQLSdyRT9itALckxNacr6hrkNmitT8EPECLuCK6lheaZbmNn_aUg/viewform?usp=publish-editor" target="_blank">
+					<a :href="form" target="_blank">
 							<span class="link-cta">
 						
 								<span class="link-cta__text">Formulaire</span>
@@ -131,6 +135,10 @@
 		z-index: -2;
 		top: calc(100% - 0.5 * var(--sq));
 		right: calc(-0.5 * var(--sq));
+	}
+
+	.price-infos__hour:last-child br {
+		display: none !important;
 	}
 
 	@media all and (max-device-width: 850px), (max-width: 850px) {

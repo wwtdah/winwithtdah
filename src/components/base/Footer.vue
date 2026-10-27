@@ -4,6 +4,10 @@
 		import BorderSVG from '@/components/svg/SVG_BorderMiddle.vue'
         import DecorationSVG from '@/assets/img/text/footer_decoration.svg'
         import SeparatorSVG from '@/assets/img/text/footer_separator.svg'
+		import Address from '@/composable/COMP_Address.vue'
+
+		import { getMail } from '@/composable/INFOS.js'
+		const mail = getMail()
 </script>
 
 
@@ -17,10 +21,10 @@
             <div class="container">
                 <article class="footer">
                     <div class="footer__email footer__maintext">
-                        <a href="mailto:winwithtdah@gmail.com">
+                        <a :href="`mailto:${mail}`">
                             <span class="decorated-title decorated-title--small decorated-title--borderleft decorated-title--border-color1-3 decorated-title--onlyborder">
                                 <span>
-                                    winwithtdah@gmail.com
+                                    {{ mail }}
                                 </span>
                             </span>
                         </a>
@@ -30,14 +34,13 @@
                         <p>
                             <b>Adresse</b>
                         </p>
-                        <p>
-                            <i>Centre Cap Santé</i> <br>
-                            Avenue Albert 1er, 13 <br>
-                            1342 Limelette
-                        </p>
+                        
+						<div class="address--footer">
+                            <Address></Address>
+                        </div>
                     </div>
 
-                    <div class="footer__calendar footer__maintext">
+                    <!-- <div class="footer__calendar footer__maintext">
                         <p>
                             <b>Heures</b>
                         </p>
@@ -46,7 +49,7 @@
                             13h30 à 15h<br>
                             ou 15h à 16h30
                         </p>
-                    </div>
+                    </div> -->
 
                     <div class="footer__links links-footer footer__maintext">
                         <ul class="unset links-footer__list">
@@ -209,6 +212,8 @@
         position: absolute;
         bottom: var(--gutter);
         opacity: 0.4;
+
+        font-size: calc(.8 * var(--font-size-main));
     }
 
     @media all and (max-device-width: 1200px), (max-width: 1200px) {
