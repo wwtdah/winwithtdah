@@ -10,7 +10,8 @@
 		
 		import { changeHeaderTitle } from '@/components/base/header/HeaderSmall.vue'
 		changeHeaderTitle('Contact', 'Informations et formulaire de contact')
-
+		
+		import ContactList from '@/composable/COMP_ContactList.vue'
 		import Agenda from '@/composable/COMP_Agenda.vue'
 		import Address from '@/composable/COMP_Address.vue'
 
@@ -75,19 +76,21 @@
 			<div class="container">
 				
 				<article class="infos">
-					<div class="infos__inner mainblock column gap--big">
-						<p>Vous souhaitez nous contacter pour mettre en place un suivi ? Merci de remplir le formulaire ci-dessous avec vos informations.</p>
-					
+					<div class="infos__inner mainblock">
 						<p>
-							Pour toute question ou information supplémentaire, n'hésitez pas à directement nous écrire par mail via <a :href="`mailto:${mail}`" class="highlight">{{ mail }}</a>.
+							Pour mettre en place un suivi ou pour toute question supplémentaire, merci de contacter l'adresse mail suivante. Je suis également disponible par téléphone au besoin.
 						</p>
+					
+						<!-- <p>
+							Pour toute question ou information supplémentaire, n'hésitez pas à directement nous écrire par mail via <a :href="`mailto:${mail}`" class="highlight">{{ mail }}</a>.
+						</p> -->
 					</div>
 				</article>
 
 				<div class="spacer spacer--small"></div>
 
 				<article class="infos-cta">
-					<a :href="form" target="_blank">
+					<!-- <a :href="form" target="_blank">
 							<span class="link-cta">
 						
 								<span class="link-cta__text">Formulaire</span>
@@ -95,7 +98,10 @@
 								<CtaBackground class="link-cta__background">
 								</CtaBackground>
 							</span>
-						</a>
+						</a> -->
+
+						
+					<ContactList class="links-presentation__list"></ContactList>
 				</article>
 			</div>
 		</div>

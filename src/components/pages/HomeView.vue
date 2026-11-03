@@ -12,14 +12,11 @@
 		
 		import PresentationPhotoDecoration from '@/assets/img/text/photo_decoration_vertical.svg'
 
-		import PartnersPhotoCapSante from '@/assets/img/logo/partners/capSante.avif'
-
 		import Agenda from '@/composable/COMP_Agenda.vue'
 		import Address from '@/composable/COMP_Address.vue'
+		// import ContactList from '@/composable/COMP_ContactList.vue'
 
-		import { getMail, getTel, getPartners } from '@/composable/INFOS.js'
-		const mail = getMail()
-		const tel = getTel()
+		import { getPartners } from '@/composable/INFOS.js'
 		const partnersInfos = getPartners()
 		const partners = ref(partnersInfos)
 		const partnersName = partnersInfos.length <= 1 ? ref('Notre partenaire') : ref('Nos partenaires')
@@ -125,28 +122,11 @@
 							<img :src="PresentationPhoto" class="photo-presentation__img" alt="Photo de Marie Daneels"/>
 							<img :src="PresentationPhotoDecoration" class="photo-presentation__decoration" alt=""/>
 						</div>
-						<div class="presentation__links links-presentation">
 
-							<ul class="unset links-presentation__list">
-								<li>
-									<span class="decorated-title decorated-title--small decorated-title--round-color1-3 decorated-title--onlyround">
-										<span>
-											{{ tel }}
-										</span>
-									</span>
-								</li>
+						<!-- <div class="presentation__links links-presentation">
 
-								<li>
-									<a :href="`mailto:${mail}`">
-										<span class="decorated-title decorated-title--small decorated-title--round-color1-3 decorated-title--onlyround">
-											<span>
-												{{ mail }}
-											</span>
-										</span>
-									</a>
-								</li>
-							</ul>
-						</div>
+							<ContactList class="links-presentation__list"></ContactList>
+						</div> -->
 				</article>
 			</div>
 		</div>
@@ -309,17 +289,7 @@
 		margin-top: calc(2 * var(--gutter));
 	}
 
-	.links-presentation__list {
-		font-weight: 400;
-		color: var(--nb4);
-	}
 
-	.links-presentation__list {
-		display: flex;
-		flex-flow: row wrap;
-		column-gap: var(--gap);
-		row-gap: var(--gutter);
-	}
 	
 	@media all and (max-device-width: 1200px), (max-width: 1200px) {
 		.presentation {
