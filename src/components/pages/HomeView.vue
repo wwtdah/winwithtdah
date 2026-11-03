@@ -114,7 +114,7 @@
 
 							<p>
 								<i>
-									Pour toute réservation de séance, merci de vous référer au formulaire présent dans la page de contact. Sinon, n'hésitez pas à me poser vos questions par mail.
+									Pour toute réservation de séance ou éventuelle question, merci de vous référer à la page de contact.
 								</i>
 							</p>
 						</div>
