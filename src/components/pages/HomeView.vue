@@ -42,7 +42,7 @@
 						<p>Le but de ce projet est de soulager les familles et surtout de rendre les enfants le plus autonome possible dans leurs devoirs chez eux. Je fonctionne par groupe de 4 enfants maximum durant 1h30. Durant cette plage horaire, nous faisons les devoirs et les leçons du jour et nous essayons d’avancer sur ceux de toute la semaine. Nous fonctionnons aussi en cours individuels durant les congés scolaires (séance d’une heure).</p>
 						
 						<p>
-							<i>Pourquoi des cours collectifs et non individuels?</i> L’enfant est non stop seul en séance de lagopède, de psychomotricité, de neuropsychologue,… Mais jamais il ne se retrouve avec d’autres enfants qui vivent des choses similaires à lui. Cela lui permet de se rendre compte que même si cela peut lui sembler injuste, il n’est pas seul.
+							<i>Pourquoi des cours collectifs et non individuels?</i> L’enfant est non stop seul en séance de logopède, de psychomotricité, de neuropsychologue,… Mais jamais il ne se retrouve avec d’autres enfants qui vivent des choses similaires à lui. Cela lui permet de se rendre compte que même si cela peut lui sembler injuste, il n’est pas seul.
 							De plus, une grande solidarité se forme au fil des séances.
 						</p>
 					</div>
